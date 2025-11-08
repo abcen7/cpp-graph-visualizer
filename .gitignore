@@ -1,5 +1,7 @@
 # Build directories
 build/
+build-*/
+build-release-*/
 cmake-build-*/
 out/
 
@@ -32,4 +34,8 @@ Thumbs.db
 # Saved graphs
 saved_graph.json
 saved_graph.csv
+
+# Release binaries (опционально - можно закоммитить готовые релизы)
+releases/
+!releases/.gitkeep
 
