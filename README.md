@@ -10,12 +10,28 @@
 
 ## Сборка
 
+### Быстрая сборка (релизная версия)
+
+**macOS/Linux:**
+```bash
+./build-release.sh
+```
+
+**Windows:**
+```cmd
+build-release-windows.bat
+```
+
+### Ручная сборка
+
 ```bash
 mkdir build
 cd build
-cmake ..
-make
+cmake .. -DCMAKE_BUILD_TYPE=Release
+cmake --build . --config Release
 ```
+
+Подробные инструкции см. в [BUILD.md](BUILD.md) и [BUILD-WINDOWS.md](BUILD-WINDOWS.md)
 
 ## Использование
 
