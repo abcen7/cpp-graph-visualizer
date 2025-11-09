@@ -114,3 +114,35 @@ src/
 - Поддержка различных макетов графа
 - Загрузка и сохранение графов в CSV и JSON форматах
 
+## MacOS Build
+Проверяю текущее состояние проекта и подготовлю инструкции по сборке:
+
+
+[4 tools called]
+
+
+## Инструкции по сборке проекта
+
+### Требования
+
+- C++20 компилятор (GCC, Clang, или MSVC)
+- CMake 3.15+
+- SFML 3.0+ (установлен и доступен для CMake)
+
+1. Установите зависимости:
+   ```bash
+   brew install sfml cmake
+   ```
+
+2. Соберите проект:
+   ```bash
+   mkdir build
+   cd build
+   cmake .. -DCMAKE_BUILD_TYPE=Release
+   cmake --build . --config Release
+   ```
+
+3. Запустите:
+   ```bash
+   ./GraphVisualizer
+   ```
