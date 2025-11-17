@@ -27,13 +27,13 @@ struct AlgorithmState {
 
 class Algorithms {
 public:
-    // BFS - обход в ширину
+    // BFS обход в ширину
     static std::vector<int> BFS(Graph& g, int start, AlgorithmState& state);
     
-    // DFS - обход в глубину
+    // DFS обход в глубину
     static std::vector<int> DFS(Graph& g, int start, AlgorithmState& state);
     
-    // Dijkstra - поиск кратчайшего пути
+    // Dijkstra поиск кратчайшего пути
     static std::vector<int> Dijkstra(Graph& g, int start, int end, AlgorithmState& state);
     
     // Вспомогательные функции

@@ -20,7 +20,7 @@ public:
     // Применить макет к графу
     void applyLayout(Graph& g, LayoutType type, double width = 800.0, double height = 600.0);
     
-    // Force-directed layout (Fruchterman-Reingold)
+    // Force directed layout Fruchterman Reingold
     void forceDirected(Graph& g, double width, double height, int iterations = 100);
     
     // Circular layout
@@ -29,7 +29,7 @@ public:
     // Random layout
     void random(Graph& g, double width, double height);
     
-    // Обновление force-directed (для анимации)
+    // Обновление force directed для анимации
     void updateForceDirected(Graph& g, double width, double height, int iterations = 1);
     
 private:

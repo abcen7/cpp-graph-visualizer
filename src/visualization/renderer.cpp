@@ -79,7 +79,6 @@ void GraphRenderer::drawEdge(const Graph& g, int from, int to, const sf::Color& 
     const Vertex* v2 = g.getVertex(to);
     if (!v1 || !v2) return;
     
-    // SFML 3: используем VertexArray для отрисовки линий
     sf::VertexArray lineArray(sf::PrimitiveType::Lines, 2);
     lineArray[0].position = sf::Vector2f(static_cast<float>(v1->x), static_cast<float>(v1->y));
     lineArray[0].color = color;
@@ -104,9 +103,7 @@ void GraphRenderer::drawVertex(const Graph& g, int id, const sf::Color& color, s
         debugCount++;
     }
     
-    // SFML 3: CircleShape создается с радиусом
     sf::CircleShape circle(vertexRadius_);
-    // SFML 3: setPosition принимает Vector2f
     circle.setPosition({static_cast<float>(v->x) - vertexRadius_, 
                        static_cast<float>(v->y) - vertexRadius_});
     circle.setFillColor(color);
@@ -120,8 +117,6 @@ void GraphRenderer::drawLabel(const Graph& g, int id, sf::RenderTarget& target) 
     const Vertex* v = g.getVertex(id);
     if (!v) return;
     
-    // Простая отрисовка текста (для полной реализации нужен sf::Font)
-    // Здесь можно добавить отрисовку ID вершины
     (void)target;  // Пока не используется
 }
 

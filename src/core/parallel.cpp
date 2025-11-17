@@ -148,7 +148,7 @@ std::unordered_map<int, int> ParallelAlgorithms::parallelComputeDegrees(Graph& g
 }
 
 std::vector<std::vector<int>> ParallelAlgorithms::parallelConnectedComponents(Graph& g, size_t /* numThreads */) {
-    // Упрощенная версия - полная параллелизация сложна для компонент связности
+    // Упрощенная версия, полная параллелизация сложна для компонент связности
     return g.getConnectedComponents();
 }
 

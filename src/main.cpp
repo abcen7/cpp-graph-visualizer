@@ -360,7 +360,7 @@ private:
             }
         }
         
-        // Force-directed layout обновляется только при изменении графа или при явном запросе
+        // Force directed layout обновляется только при изменении графа или при явном запросе
         // Убрано постоянное обновление для стабильности визуализации
         // Если нужна анимация, можно добавить флаг и обновлять с ограничением частоты
     }
@@ -390,14 +390,14 @@ private:
             if (graph_->getVertexCount() > 0 && renderer_) {
                 renderer_->render(*graph_, algorithmState_, window_);
             } else {
-                // Отладочная отрисовка - показать что-то, если граф пустой
+                // Отладочная отрисовка для пустого графа
                 sf::CircleShape testCircle(50.0f);
                 testCircle.setPosition({100.0f, 100.0f});
                 testCircle.setFillColor(sf::Color::Red);
                 window_.draw(testCircle);
             }
         } else {
-            // Отладочная отрисовка - показать что-то, если граф не создан
+            // Отладочная отрисовка для неинициализированного графа
             sf::CircleShape testCircle(50.0f);
             testCircle.setPosition({100.0f, 100.0f});
             testCircle.setFillColor(sf::Color::Blue);
@@ -423,8 +423,8 @@ private:
     }
     
     void loadGraph() {
-        // Для интерактивной загрузки используйте примеры из папки examples/
-        // или укажите файл при запуске: ./GraphVisualizer examples/test_graph.csv
+        // Для интерактивной загрузки используйте примеры из папки examples
+        // или укажите файл при запуске программы
         std::cout << "Используйте аргумент командной строки для загрузки графа" << std::endl;
         std::cout << "Пример: ./GraphVisualizer examples/test_graph.csv" << std::endl;
     }
